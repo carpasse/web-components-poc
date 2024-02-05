@@ -1,7 +1,7 @@
 {
-  "name": "@carpasse/node-open-source-project-template",
-  "version": "1.0.0-beta.1",
-  "description": "Repository template for new Open Source projects with NodeJS",
+  "name": "@carpasse/web-components-poc",
+  "version": "0.1.0",
+  "description": "Exploring the possibilities of web components",
   "main": "./dist/cjs/index.js",
   "module": "./dist/cjs/index.mjs",
   "type": "commonjs",
@@ -48,9 +48,9 @@
     "commitlint": "commitlint --edit"
   },
   "author": "Carlos Serrano",
-  "license": "MIT",
+  "license": "NO LICENSE",
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "engines": {
     "node": ">=18.x"
