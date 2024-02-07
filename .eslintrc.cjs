@@ -4,7 +4,7 @@ module.exports = {
     es2022: true,
     node: true
   },
-  extends: ['ts-mailonline'],
+  extends: ['ts-mailonline', 'plugin:storybook/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['./tsconfig.json', './tsconfig.eslint.json'],
