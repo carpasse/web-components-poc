@@ -32,10 +32,9 @@
     "test": "node --import tsx --no-warnings --test src/**/*.test.ts",
     "test:watch": "node --import tsx --no-warnings --test --watch ./src/**/*.test.ts",
     "test:coverage": "node --import tsx --no-warnings --test --experimental-test-coverage ./src/**/*.test.ts",
-    "build": "npm-run-all clean build:*",
+    "watch": "webpack --config webpack.config.js --mode development --watch",
+    "build": "webpack --config webpack.config.js --mode production",
     "clean": "rimraf dist",
-    "build:cjs": "tsc -p ./tsconfig.cjs.json && cat >dist/cjs/package.json <<!EOF\n{\n    \"type\": \"commonjs\"\n}\n!EOF",
-    "build:esm": "tsc --project tsconfig.esm.json && cat >dist/esm/package.json <<!EOF\n{\n    \"type\": \"module\"\n}\n!EOF",
     "lint": "eslint './**/*.{js,jsx,ts,tsx}' && npm run typecheck",
     "lint:fix": "eslint './**/*.{js,jsx,ts,tsx}' --fix",
     "lint:ci": "eslint './**/*.{js,jsx,ts,tsx}' --fix",
@@ -77,6 +76,7 @@
     "@storybook/web-components-webpack5": "^7.6.13",
     "commitizen": "^4.3.0",
     "cross-env": "^7.0.3",
+    "css-loader": "^6.10.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.55.0",
     "eslint-config-ts-mailonline": "^3.0.0",
@@ -92,8 +92,12 @@
     "semantic-release": "^23.0.0",
     "shx": "^0.3.4",
     "storybook": "^7.6.13",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
     "ts-node": "^10.9.1",
     "tsx": "^4.6.2",
-    "typescript": "^5.3.2"
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
   }
 }

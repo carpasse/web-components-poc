@@ -1,12 +1,13 @@
 {
-  "include": ["./src/**/*.ts", "./src/**/*.d.ts", "./src/**/*.json"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist", "coverage", "./src/**/*.test.ts", "./src/**/__tests__/**/*.ts"],
   "compilerOptions": {
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "forceConsistentCasingInFileNames": true,
     "lib": ["ES2023", "DOM"],
-    "module": "ES2022",
+    "module": "CommonJS",
     "moduleResolution": "Node",
     "noEmitHelpers": false,
     "noEmitOnError": true,
@@ -16,11 +17,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "pretty": true,
-    "rootDir": "src",
     "strict": true,
     "strictBindCallApply": true,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
-    "target": "ES2022"
+    "resolveJsonModule": true,
+    "target": "ES2022",
+    "types": ["node"]
   }
 }
