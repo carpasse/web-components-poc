@@ -1,3 +1,4 @@
+import 'global-jsdom/register';
 import {describe, it} from 'node:test';
 import assert from 'node:assert/strict';
 import {test} from '../index';
