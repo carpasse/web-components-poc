@@ -1,4 +1,6 @@
 import type {StorybookConfig} from '@storybook/web-components-webpack5';
+import webpackConfig from '../webpack.config.cjs';
+import {RuleSetRule} from 'webpack';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -13,6 +15,17 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: 'tag'
+  },
+  webpackFinal: async (config) => {
+    if (config && config.module && config.module.rules) {
+      config.module.rules = (config.module?.rules as RuleSetRule[]).filter(
+        (rule) => rule && rule.test && rule.test.toString() !== '/\\.css$/'
+      );
+
+      config.module.rules.push(...webpackConfig.module.rules);
+    }
+    return config;
   }
 };
+
 export default config;
