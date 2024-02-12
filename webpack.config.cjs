@@ -24,6 +24,7 @@ const config = {
       },
       {
         test: /\.css$/,
+        sideEffects: true,
         use: [
           DEV ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-modules-typescript-loader',
@@ -33,7 +34,8 @@ const config = {
               importLoaders: 3,
               modules: {
                 exportLocalsConvention: 'camelCase',
-                localIdentName: '[local]___[hash:base64:5]',
+                // localIdentName: '[local]___[hash:base64:5]',
+                localIdentName: '[local]',
                 mode: 'local'
               },
               sourceMap: true

@@ -18,12 +18,13 @@ const config: StorybookConfig = {
   },
   webpackFinal: async (config) => {
     if (config && config.module && config.module.rules) {
-      config.module.rules = (config.module?.rules as RuleSetRule[]).filter(
-        (rule) => rule && rule.test && rule.test.toString() !== '/\\.css$/'
-      );
+      config.module.rules = (config.module?.rules as RuleSetRule[]).filter((rule) => {
+        return rule && rule.test && rule.test.toString() !== '/\\.css$/' && rule.test.toString() !== '/\\.tsx?$/';
+      });
 
       config.module.rules.push(...webpackConfig.module.rules);
     }
+
     return config;
   }
 };

@@ -7,7 +7,7 @@ class LiveBadge extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-      <span class="${styles.mLive} ${styles.mLive}">
+      <span class="${styles.mBadge} ${styles.mLive}">
         <span class="${styles.mBulletIcon}"></span>
         <span class="${styles.mLiveBulletText}">LIVE</span>
       </span>`;
