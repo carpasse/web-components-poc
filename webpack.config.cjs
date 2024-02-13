@@ -34,8 +34,7 @@ const config = {
               importLoaders: 3,
               modules: {
                 exportLocalsConvention: 'camelCase',
-                // localIdentName: '[local]___[hash:base64:5]',
-                localIdentName: '[local]',
+                localIdentName: DEV ? '[local]' : '[local]___[hash:base64:5]',
                 mode: 'local'
               },
               sourceMap: true
