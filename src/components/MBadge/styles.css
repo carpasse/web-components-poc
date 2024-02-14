@@ -1,0 +1,30 @@
+:root {
+  --m-badge-background-color: #f03649;
+  --m-badge-color: #fff;
+  --m-badge-font-weight: 600;
+  --m-badge-font-size: 0.8em;
+  --m-badge-font-family: 'verdana', arial, sans-serif;
+  --m-badge-border-radius: 0;
+
+  .m-badge {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-flex;
+    gap: 0.3em;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    margin-right: 0.3em;
+    padding: 0.1em 0.25em;
+    line-height: 1;
+    font-size: var(--m-badge-font-size);
+    background-color: var(--m-badge-background-color);
+    color: var(--m-badge-color);
+    font-weight: var(--m-badge-font-weight);
+    white-space: nowrap;
+    font-family: var(--m-badge-font-family);
+    vertical-align: middle;
+    text-transform: uppercase;
+    border-radius: var(--m-badge-border-radius);
+  }
+}

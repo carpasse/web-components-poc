@@ -1,17 +1,17 @@
 import styles from './styles.css';
 
-class LiveBadge extends HTMLElement {
+class MLiveBadge extends HTMLElement {
   constructor() {
     super();
   }
 
   connectedCallback() {
     this.innerHTML = `
-      <span class="${styles.mBadge} ${styles.mLive}">
+      <span is="m-badge" class="${styles.mLive}">
         <span class="${styles.mBulletIcon}"></span>
         <span class="${styles.mLiveBulletText}">LIVE</span>
       </span>`;
   }
 }
 
-window.customElements.define('m-live-badge', LiveBadge);
+window.customElements.define('m-live-badge', MLiveBadge);
