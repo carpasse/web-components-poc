@@ -1,30 +1,35 @@
 import type {StoryObj} from '@storybook/web-components';
+import '../theme.css';
 
 export type Story = StoryObj<{}>;
 
 export type WebComponentLibArgs = Partial<{
   fontSize: number;
-  borderRadius: number;
-  color: string;
-  backgroundColor: string;
   fontWeight: number;
   fontFamily: string;
+  // Badge component
+  badgeFontSize: number;
+  badgeFontWeight: number;
+  badgeFontFamily: string;
+  badgeBorderRadius: number;
+  badgeColor: string;
+  badgeBgColor: string;
 }>;
 
 export const getArgs = (): WebComponentLibArgs => ({
-  backgroundColor: '#f03649',
-  borderRadius: 0.25,
-  color: '#fff',
+  badgeBgColor: '#f03649',
+  badgeBorderRadius: 0.25,
+  badgeColor: '#fff',
   fontFamily: 'Arial',
   fontSize: 20,
   fontWeight: 400
 });
 
 export const getArgTypes = () => ({
-  backgroundColor: {
+  badgeBgColor: {
     control: 'color'
   },
-  borderRadius: {
+  badgeBorderRadius: {
     control: {
       max: 1,
       min: 0,
@@ -32,8 +37,30 @@ export const getArgTypes = () => ({
       type: 'range'
     }
   },
-  color: {
+  badgeColor: {
     control: 'color'
+  },
+  badgeFontFamily: {
+    control: {
+      type: 'radio'
+    },
+    options: ['Arial', 'Helvetica', 'sans-serif', 'Times New Roman', 'Times', 'verdana']
+  },
+  badgeFontSize: {
+    control: {
+      max: 90,
+      min: 10,
+      step: 2,
+      type: 'range'
+    }
+  },
+  badgeFontWeight: {
+    control: {
+      max: 900,
+      min: 100,
+      step: 100,
+      type: 'range'
+    }
   },
   fontFamily: {
     control: {
@@ -61,15 +88,28 @@ export const getArgTypes = () => ({
 
 export const createWebComponentStory = (html: string) => {
   const story: Story = (args: WebComponentLibArgs) => {
-    const {fontSize, borderRadius, color, backgroundColor, fontWeight, fontFamily} = args;
+    const {
+      badgeBgColor,
+      badgeBorderRadius,
+      badgeColor,
+      badgeFontFamily,
+      badgeFontSize,
+      badgeFontWeight,
+      fontFamily,
+      fontSize,
+      fontWeight
+    } = args;
 
     const styles = `
-      ${backgroundColor ? `--m-badge-background-color: ${backgroundColor}` : ''};
-      ${borderRadius ? `--m-badge-border-radius: ${borderRadius}rem` : ''};
-      ${color ? `--m-badge-color: ${color}` : ''};
-      ${fontSize ? `--m-badge-font-size: ${fontSize}px` : ''};
-      ${fontWeight ? `--m-badge-font-weight: ${fontWeight}` : ''};
-      ${fontFamily ? `--m-badge-font-family: ${fontFamily}` : ''};
+      ${badgeBgColor ? `--m-badge-background-color: ${badgeBgColor}` : ''};
+      ${badgeBorderRadius ? `--m-badge-border-radius: ${badgeBorderRadius}rem` : ''};
+      ${badgeColor ? `--m-badge-color: ${badgeColor}` : ''};
+      ${badgeFontSize ? `--m-badge-font-size: ${badgeFontSize}px` : ''};
+      ${badgeFontWeight ? `--m-badge-font-weight: ${badgeFontWeight}` : ''};
+      ${badgeFontFamily ? `--m-badge-font-family: ${badgeFontFamily}` : ''};
+      ${fontSize ? `--m-font-size: ${fontSize}px` : ''};
+      ${fontWeight ? `--m-font-weight: ${fontWeight}` : ''};
+      ${fontFamily ? `--m-font-family: ${fontFamily}` : ''};
     `;
 
     return `

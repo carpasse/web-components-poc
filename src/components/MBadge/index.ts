@@ -18,7 +18,7 @@ import styles from './styles.css';
  * --m-badge-font-weight - The font weight of the badge
  * --m-badge-font-family - The font family of the badge
  */
-class MBadge extends HTMLSpanElement {
+export class MBadge extends HTMLSpanElement {
   constructor() {
     super();
   }

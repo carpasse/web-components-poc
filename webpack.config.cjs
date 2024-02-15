@@ -12,7 +12,7 @@ const config = {
   plugins: [
     new MiniCssExtractPlugin({
       chunkFilename: '[id].css',
-      filename: 'm-wc-liv.css'
+      filename: 'm-wc-lib.css'
     })
   ],
   module: {

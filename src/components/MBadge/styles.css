@@ -1,11 +1,4 @@
 :root {
-  --m-badge-background-color: #f03649;
-  --m-badge-color: #fff;
-  --m-badge-font-weight: 600;
-  --m-badge-font-size: 0.8em;
-  --m-badge-font-family: 'verdana', arial, sans-serif;
-  --m-badge-border-radius: 0;
-
   .m-badge {
     box-sizing: border-box;
     position: relative;

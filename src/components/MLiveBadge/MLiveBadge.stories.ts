@@ -11,4 +11,4 @@ const meta = {
 
 export default meta;
 
-export const Primary = createWebComponentStory(`<m-live-badge></m-live-badge>`);
+export const Primary = createWebComponentStory(`<span is="m-live-badge">LIVE</span>`);

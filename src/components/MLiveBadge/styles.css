@@ -1,29 +1,9 @@
-.m-badge {
-  box-sizing: border-box;
-  position: relative;
-  display: inline-flex;
-  gap: 0.3em;
-  flex-direction: row;
-  align-items: center;
-  width: auto;
-  margin-right: 0.3em;
-  padding: 0.1em 0.25em;
-  line-height: 1;
-  font-size: 0.8em;
-  background: #f03649;
-  color: #fff;
-  font-weight: 600;
-  white-space: nowrap;
-  font-family: 'inter', 'graphik', arial, sans-serif;
-  vertical-align: middle;
-}
-
 .m-live .m-live-bullet-text {
   padding-left: 0.9em;
 }
 
 .m-live .m-bullet-icon {
-  background: radial-gradient(circle, transparent 53%, rgba(187, 25, 25, 0.5) 53.5%, #fff 60%);
+  background: radial-gradient(circle, transparent 53%, var(--m-badge-background-color) 53.5%, var(--m-badge-color) 60%);
   position: absolute;
   left: 0.3em;
   border-radius: 50%;
@@ -33,7 +13,7 @@
 }
 
 .m-live .m-bullet-icon::before {
-  background: radial-gradient(circle, #fff 37%, rgba(187, 25, 25, 0.5) 37.5%, transparent 38%);
+  background: radial-gradient(circle, var(--m-badge-color) 37%, var(--m-badge-background-color) 37.5%, transparent 38%);
   content: '';
   position: absolute;
   width: 100%;
@@ -46,9 +26,9 @@
 @keyframes m-live {
   0%,
   100% {
-    transform: scale(1);
+    transform: scale(0.8);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.25);
   }
 }

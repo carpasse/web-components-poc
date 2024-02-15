@@ -3,5 +3,6 @@
  */
 
 import './components';
+import './theme.css';
 
 export const test = 'test';

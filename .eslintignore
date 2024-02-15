@@ -7,3 +7,4 @@ node_modules/
 .husky/
 .github/
 **/dist/*
+*.css.d.ts
