@@ -21,7 +21,7 @@ export const getArgs = (): WebComponentLibArgs => ({
   badgeBorderRadius: 0.25,
   badgeColor: '#fff',
   fontFamily: 'Arial',
-  fontSize: 20,
+  fontSize: 65,
   fontWeight: 400
 });
 
@@ -44,7 +44,7 @@ export const getArgTypes = () => ({
     control: {
       type: 'radio'
     },
-    options: ['Arial', 'Helvetica', 'sans-serif', 'Times New Roman', 'Times', 'verdana']
+    options: ['Arial', 'Helvetica', 'Times New Roman', 'verdana']
   },
   badgeFontSize: {
     control: {
@@ -101,15 +101,15 @@ export const createWebComponentStory = (html: string) => {
     } = args;
 
     const styles = `
+      ${fontSize ? `font-size: ${fontSize}px` : ''};
+      ${fontWeight ? `font-weight: ${fontWeight}` : ''};
+      ${fontFamily ? `font-family: ${fontFamily}` : ''};
       ${badgeBgColor ? `--m-badge-background-color: ${badgeBgColor}` : ''};
       ${badgeBorderRadius ? `--m-badge-border-radius: ${badgeBorderRadius}rem` : ''};
       ${badgeColor ? `--m-badge-color: ${badgeColor}` : ''};
       ${badgeFontSize ? `--m-badge-font-size: ${badgeFontSize}px` : ''};
       ${badgeFontWeight ? `--m-badge-font-weight: ${badgeFontWeight}` : ''};
       ${badgeFontFamily ? `--m-badge-font-family: ${badgeFontFamily}` : ''};
-      ${fontSize ? `--m-font-size: ${fontSize}px` : ''};
-      ${fontWeight ? `--m-font-weight: ${fontWeight}` : ''};
-      ${fontFamily ? `--m-font-family: ${fontFamily}` : ''};
     `;
 
     return `

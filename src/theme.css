@@ -4,13 +4,7 @@
   --m-white: #fff;
   --m-black: #000;
 
-  /* FONT DEFAULTS */
-  --m-font-family: inherit;
-  --m-font-weight: inherit;
-  --m-font-size: inherit;
-  --m-color: inherit;
-
-  /* BADGE*/
+  /* BADGE */
   --m-badge-background-color: var(--m-red);
   --m-badge-color: var(--m-white);
   --m-badge-font-weight: inherit;
@@ -26,10 +20,6 @@
   }
 
   [is|='m'] {
-    font-family: var(--m-font-family);
-    font-weight: var(--m-font-weight);
-    font-size: var(--m-font-size);
-    color: var(--m-color);
     box-sizing: border-box;
   }
 }
