@@ -13,7 +13,13 @@
 }
 
 .m-live .m-bullet-icon::before {
-  background: radial-gradient(circle, var(--m-badge-color) 37%, var(--m-badge-background-color) 37.5%, transparent 38%);
+  background-image: radial-gradient(
+    circle,
+    var(--m-badge-color) 37%,
+    var(--m-badge-background-color) 37.5%,
+    transparent 38%
+  );
+  background-position: center;
   content: '';
   position: absolute;
   width: 100%;
@@ -26,9 +32,9 @@
 @keyframes m-live {
   0%,
   100% {
-    transform: scale(0.8);
+    transform: scale(0.75);
   }
   50% {
-    transform: scale(1.25);
+    transform: scale(1.2);
   }
 }
