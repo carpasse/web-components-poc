@@ -5,7 +5,7 @@ import './index.ts';
 const meta = {
   component: 'm-badge',
   tags: ['autodocs'],
-  title: 'components/Badge'
+  title: 'Signposting/Badge'
 } satisfies Meta<{}>;
 
 export default meta;

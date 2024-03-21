@@ -4,13 +4,11 @@ import '.';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-  component: 'm-live-badge',
+  component: 'm-plus',
   tags: ['autodocs'],
-  title: 'Signposting/LiveBadge'
+  title: 'Signposting/MPlusBadge'
 } satisfies Meta<{}>;
 
 export default meta;
 
-export const Primary = createWebComponentStory(`<span is="m-live-badge">LIVE</span>`);
-
-export const WithCustomText = createWebComponentStory(`<span is="m-live-badge">CUSTOM TEXT</span>`);
+export const Primary = createWebComponentStory(`<span is="m-plus-badge">M+</span>`);

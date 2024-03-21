@@ -1,1 +1,2 @@
+import './MBadge';
 import './MLiveBadge';
