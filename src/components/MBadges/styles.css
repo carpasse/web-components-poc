@@ -1,0 +1,5 @@
+.m-badges {
+  display: inline-flex;
+  margin-right: 0.3em;
+  flex-wrap: wrap;
+}

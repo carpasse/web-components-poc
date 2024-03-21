@@ -50,11 +50,19 @@ const config = {
             }
           }
         ]
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-inline-loader'
+          }
+        ]
       }
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.svg']
   },
   watchOptions: {
     ignored: /node_modules/

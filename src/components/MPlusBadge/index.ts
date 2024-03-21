@@ -1,13 +1,16 @@
+import {MBadge} from '../MBadge';
 import styles from './styles.css';
+import mPlusLogo from './assets/mailplusLogo.svg';
 
-class MPlusBadge extends HTMLSpanElement {
+class MPlusBadge extends MBadge {
   constructor() {
     super();
   }
 
   connectedCallback() {
+    super.connectedCallback();
     this.classList.add(styles.mPlus);
-    this.innerHTML = ``;
+    this.innerHTML = mPlusLogo;
   }
 }
 

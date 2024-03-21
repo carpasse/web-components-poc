@@ -22,6 +22,11 @@ const config: StorybookConfig = {
         return rule && rule.test && rule.test.toString() !== '/\\.css$/' && rule.test.toString() !== '/\\.tsx?$/';
       });
 
+      // disable whatever is already set to load SVGs
+      (config.module?.rules as RuleSetRule[])
+        .filter((rule) => rule && rule.test && rule.test instanceof RegExp && rule.test.test('.svg'))
+        .forEach((rule) => (rule.exclude = /\.svg$/i));
+
       config.module.rules.push(...webpackConfig.module.rules);
     }
 

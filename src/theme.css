@@ -11,6 +11,7 @@
   --m-badge-font-size: 0.8em;
   --m-badge-font-family: inherit;
   --m-badge-border-radius: 0;
+  --m-plus-badge-border-radius: 0.39181rem;
 
   /* Default styles */
   [is|='m'] *,
