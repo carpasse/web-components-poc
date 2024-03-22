@@ -16,7 +16,7 @@ const config = {
         tsconfig: 'tsconfig.jest.json'
       }
     ],
-    '.+\\.(css)$': [
+    '.+\\.css$': [
       'jest-css-modules-transform',
       {
         cssLoaderConfig: {

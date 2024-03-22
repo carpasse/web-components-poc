@@ -17,9 +17,9 @@
     "url": "git+https://github.com/carpasse/node-open-source-project-template.git"
   },
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test": "JEST_CSS_MODULES_TRANSFORM_CONFIG=jest-css-modules-transform-config.cjs jest",
+    "test:watch": "JEST_CSS_MODULES_TRANSFORM_CONFIG=jest-css-modules-transform-config.cjs jest --watch",
+    "test:coverage": "JEST_CSS_MODULES_TRANSFORM_CONFIG=jest-css-modules-transform-config.cjs jest --coverage",
     "watch": "webpack --config webpack.config.cjs --mode development --watch",
     "build": "npm run clean && webpack --config webpack.config.cjs --mode production",
     "clean": "rimraf dist",
