@@ -1,0 +1,16 @@
+{
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.d.ts", "./__tests__/**/*"],
+  "exclude": ["node_modules", "dist", "coverage"],
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "lib": ["es2017", "DOM"],
+    "types": ["node", "jest"],
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext"
+  }
+}

@@ -7,8 +7,8 @@
     "baseUrl": ".",
     "forceConsistentCasingInFileNames": true,
     "lib": ["ES2023", "DOM"],
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "noEmitHelpers": false,
     "noEmitOnError": true,
     "noErrorTruncation": true,
@@ -22,6 +22,7 @@
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "resolveJsonModule": true,
-    "target": "ES2022"
+    "target": "ES2022",
+    "skipLibCheck": true
   }
 }

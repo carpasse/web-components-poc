@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/web-components';
-import {createWebComponentStory} from '../../helpers/storybookUtils';
-import './index.ts';
+import {createWebComponentStory} from '../../helpers/storybookUtils.js';
+import '../index.js';
 
 const meta = {
   component: 'm-badge',

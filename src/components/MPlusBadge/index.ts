@@ -1,4 +1,4 @@
-import {MBadge} from '../MBadge';
+import {MBadge} from '../MBadge/index.js';
 import styles from './styles.css';
 import mPlusLogo from './assets/mailplusLogo.svg';
 

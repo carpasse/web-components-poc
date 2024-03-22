@@ -1,5 +1,5 @@
-import {describe, test} from 'node:test';
-import assert from 'node:assert/strict';
+import assert from 'node:assert';
+import {describe, test, expect} from '@jest/globals';
 import style from '../components/MBadge/styles.css';
 import '../index';
 
@@ -17,9 +17,13 @@ describe('MBadge', () => {
   test(`should add class ${style.mBadge} to m-badge span elements`, () => {
     const badge = html`<span is="m-badge">Badge</span>`;
 
-    assert(badge instanceof HTMLSpanElement);
-    assert(badge.getAttribute('is') === 'm-badge');
-    assert(badge.textContent === 'Badge');
-    assert(badge.classList.contains(style.mBadge));
+    if (!badge) {
+      assert.fail('Badge is null');
+    }
+
+    expect(badge).toBeInstanceOf(HTMLSpanElement);
+    expect(badge.getAttribute('is')).toBe('m-badge');
+    expect(badge.textContent).toBe('Badge');
+    expect(badge.classList.contains(style.mBadge)).toBe(true);
   });
 });

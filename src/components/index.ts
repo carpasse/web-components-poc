@@ -1,4 +1,4 @@
-import './MBadge';
-import './MLiveBadge';
-import './MPlusBadge';
-import './MBadges';
+import './MBadge/index.js';
+import './MLiveBadge/index.js';
+import './MPlusBadge/index.js';
+import './MBadges/index.js';

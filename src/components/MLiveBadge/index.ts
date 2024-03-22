@@ -1,4 +1,4 @@
-import {MBadge} from '../MBadge';
+import {MBadge} from '../MBadge/index.js';
 import styles from './styles.css';
 
 class MLiveBadge extends MBadge {

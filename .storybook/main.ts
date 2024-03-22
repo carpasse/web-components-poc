@@ -28,6 +28,7 @@ const config: StorybookConfig = {
         .forEach((rule) => (rule.exclude = /\.svg$/i));
 
       config.module.rules.push(...webpackConfig.module.rules);
+      config.resolve = webpackConfig.resolve;
     }
 
     return config;

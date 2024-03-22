@@ -62,7 +62,10 @@ const config = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.svg']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.svg'],
+    extensionAlias: {
+      '.js': ['.js', '.ts']
+    }
   },
   watchOptions: {
     ignored: /node_modules/
