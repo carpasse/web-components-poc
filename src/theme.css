@@ -1,10 +1,11 @@
 :root {
   /* PALETTE */
   --m-red: #f03649;
+  --m-red-2: #c00;
   --m-white: #fff;
   --m-black: #000;
 
-  /* BADGE */
+  /* SIGNPOSTING */
   --m-badge-background-color: var(--m-red);
   --m-badge-color: var(--m-white);
   --m-badge-font-weight: inherit;
@@ -12,6 +13,10 @@
   --m-badge-font-family: inherit;
   --m-badge-border-radius: 0;
   --m-plus-badge-border-radius: 0.39181rem;
+
+  /* HEADLINE */
+  --m-headline-color: var(--m-black);
+  --m-headline-hover-color: var(--m-red-2);
 
   /* Default styles */
   [is|='m'] *,

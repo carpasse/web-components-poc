@@ -1,0 +1,28 @@
+.m-article-preview-headline {
+  color: var(--m-headline-color);
+  font-weight: bold;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.m-article-preview-headline a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.m-article-preview-headline:hover {
+  color: var(--m-headline-hover-color);
+}
+
+.article-preview-headline_small {
+  font-size: 0.975rem;
+}
+
+.article-preview-headline_large {
+  font-size: 1.875rem;
+}
+
+.article-preview-headline_mobile {
+  font-size: 1.25rem;
+  line-height: 1.18;
+}
