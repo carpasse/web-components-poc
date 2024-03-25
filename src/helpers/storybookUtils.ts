@@ -4,130 +4,96 @@ import '../theme.css';
 export type Story = StoryObj<{}>;
 
 export type WebComponentLibArgs = Partial<{
-  fontSize: number;
-  fontWeight: number;
-  fontFamily: string;
   // Signposting
-  badgeFontSize: number;
-  badgeFontWeight: number;
-  badgeFontFamily: string;
-  badgeBorderRadius: number;
-  badgeColor: string;
-  badgeBgColor: string;
+  '--m-badge-font-size': number;
+  '--m-badge-font-weight': number;
+  '--m-badge-font-family': string;
+  '--m-badge-border-radius': number;
+  '--m-badge-color': string;
+  '--m-badge-background-color': string;
+  '--m-plus-badge-border-radius': number;
   // ArticlePreview
-  headlineColor: string;
-  headlineHoverColor: string;
+  '--m-headline-color': string;
+  '--m-headline-hover-color': string;
 }>;
 
-export const getArgs = (): WebComponentLibArgs => ({
-  badgeBgColor: '#f03649',
-  badgeBorderRadius: 0.25,
-  badgeColor: '#fff',
-  fontFamily: 'Arial',
-  fontSize: 25,
-  fontWeight: 400,
-  headlineColor: '#000',
-  headlineHoverColor: '#C00'
-});
+export const getArgs = (): WebComponentLibArgs => ({});
 
 export const getArgTypes = () => ({
-  badgeBgColor: {
+  '--m-badge-background-color': {
     control: 'color',
-    description: '--m-badge-background-color: The background color of the badge. defaults to `#f03649`.'
+    description: 'The background color of the badge. Defaults to `#f03649`.'
   },
-  badgeBorderRadius: {
+  '--m-badge-border-radius': {
     control: {
       max: 1,
       min: 0,
       step: 0.1,
       type: 'range'
     },
-    description: '--m-badge-border-radius: OPTIONAL overwrite of the border radius of the badge.'
+    description: 'border radius of the badge. Defaults to `0`'
   },
-  badgeColor: {
+  '--m-badge-color': {
     control: 'color',
-    description: '--m-badge-color: The color of the badge text.'
+    description: 'The color of the badge text. Defaults to `#fff`.'
   },
-  badgeFontFamily: {
+  '--m-badge-font-family': {
     control: {
       type: 'radio'
     },
-    description: '--m-badge-font-family: OPTIONAL overwrite of the font family of the badge text.',
+    description: 'Font family of the badge text. Defaults to `inherit`.',
     options: ['Arial', 'Helvetica', 'Times New Roman', 'verdana']
   },
-  badgeFontSize: {
+  '--m-badge-font-size': {
     control: {
       max: 90,
       min: 10,
       step: 2,
       type: 'range'
     },
-    description: '--m-badge-font-size: OPTIONAL overwrite of the font size of the badge text.'
+    description: 'Font size of the badge text. Defaults to `0.8em`.'
   },
-  badgeFontWeight: {
+  '--m-badge-font-weight': {
     control: {
       max: 900,
       min: 100,
       step: 100,
       type: 'range'
     },
-    description: '--m-badge-font-weight: OPTIONAL overwrite of the font weight of the badge text.'
+    description: 'Font weight of the badge text. Defaults to `inherit`.'
   },
-  fontFamily: {
-    control: {
-      type: 'radio'
-    },
-    description: 'font-family: The default font family of the text.',
-    options: ['Arial', 'Helvetica', 'sans-serif', 'Times New Roman', 'Times', 'verdana']
+  '--m-headline-color': {
+    control: 'color',
+    description: 'The color of the headline text. Defaults to `#000`.'
   },
-  fontSize: {
+  '--m-headline-hover-color': {
+    control: 'color',
+    description: 'The color of the headline text on hover. Defaults to `#c00`.'
+  },
+  '--m-plus-badge-border-radius': {
     control: {
-      max: 90,
-      min: 10,
-      step: 2,
+      max: 100,
+      min: 0,
+      step: 1,
       type: 'range'
     },
-    description: 'font-size: The default font size of the text.'
-  },
-  fontWeight: {
-    control: {
-      max: 900,
-      min: 100,
-      step: 100,
-      type: 'range'
-    },
-    description: 'font-weight: The default font weight of the text.'
-  },
-  headlineColor: {
-    control: 'color',
-    description: '--m-headline-color: The color of the headline text.'
-  },
-  headlineHoverColor: {
-    control: 'color',
-    description: '--m-headline-hover-color: The color of the headline text on hover.'
+    description: 'border radius of the plus badge. Defaults to `33%`'
   }
 });
 
 export const createWebComponentStory = (html: string) => {
   const story: Story = (args: WebComponentLibArgs) => {
-    const {
-      badgeBgColor,
-      badgeBorderRadius,
-      badgeColor,
-      badgeFontFamily,
-      badgeFontSize,
-      badgeFontWeight,
-      fontFamily,
-      fontSize,
-      fontWeight,
-      headlineColor,
-      headlineHoverColor
-    } = args;
+    const badgeBgColor = args['--m-badge-background-color'];
+    const badgeBorderRadius = args['--m-badge-border-radius'];
+    const badgeColor = args['--m-badge-color'];
+    const badgeFontFamily = args['--m-badge-font-family'];
+    const badgeFontSize = args['--m-badge-font-size'];
+    const badgeFontWeight = args['--m-badge-font-weight'];
+    const headlineColor = args['--m-headline-color'];
+    const headlineHoverColor = args['--m-headline-hover-color'];
+    const plusBadgeBorderRadius = args['--m-plus-badge-border-radius'];
 
     const styles = `
-      ${fontSize ? `font-size: ${fontSize}px` : ''};
-      ${fontWeight ? `font-weight: ${fontWeight}` : ''};
-      ${fontFamily ? `font-family: ${fontFamily}` : ''};
       ${badgeBgColor ? `--m-badge-background-color: ${badgeBgColor}` : ''};
       ${badgeBorderRadius ? `--m-badge-border-radius: ${badgeBorderRadius}rem` : ''};
       ${badgeColor ? `--m-badge-color: ${badgeColor}` : ''};
@@ -136,6 +102,7 @@ export const createWebComponentStory = (html: string) => {
       ${badgeFontFamily ? `--m-badge-font-family: ${badgeFontFamily}` : ''};
       ${headlineColor ? `--m-headline-color: ${headlineColor}` : ''};
       ${headlineHoverColor ? `--m-headline-hover-color: ${headlineHoverColor}` : ''};
+      ${plusBadgeBorderRadius ? `--m-plus-badge-border-radius: ${plusBadgeBorderRadius}%` : ''};
     `;
 
     return `

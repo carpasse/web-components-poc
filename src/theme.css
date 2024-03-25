@@ -12,7 +12,7 @@
   --m-badge-font-size: 0.8em;
   --m-badge-font-family: inherit;
   --m-badge-border-radius: 0;
-  --m-plus-badge-border-radius: 0.39181rem;
+  --m-plus-badge-border-radius: 33%;
 
   /* HEADLINE */
   --m-headline-color: var(--m-black);

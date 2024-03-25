@@ -5,7 +5,7 @@
   cursor: pointer;
 }
 
-.m-article-preview-headline a {
+.m-article-preview-headline-link {
   color: inherit;
   text-decoration: none;
 }
