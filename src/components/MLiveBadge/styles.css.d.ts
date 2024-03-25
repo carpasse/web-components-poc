@@ -4,9 +4,9 @@ interface CssExports {
   'm-bullet-icon': string;
   'm-live': string;
   'm-live-bullet-text': string;
-  mBulletIcon: string;
-  mLive: string;
-  mLiveBulletText: string;
+  'mBulletIcon': string;
+  'mLive': string;
+  'mLiveBulletText': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

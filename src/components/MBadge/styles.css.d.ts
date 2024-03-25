@@ -2,7 +2,7 @@
 // Please do not change this file!
 interface CssExports {
   'm-badge': string;
-  mBadge: string;
+  'mBadge': string;
 }
 export const cssExports: CssExports;
 export default cssExports;
