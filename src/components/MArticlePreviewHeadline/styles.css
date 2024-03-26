@@ -1,5 +1,6 @@
 .m-article-preview-headline {
   color: var(--m-headline-color);
+  font-size: 1.25rem;
   font-weight: bold;
   line-height: normal;
   cursor: pointer;
@@ -14,15 +15,14 @@
   color: var(--m-headline-hover-color);
 }
 
-.article-preview-headline_small {
+:is(.column-split, .beta) .m-article-preview-headline {
   font-size: 0.975rem;
 }
 
-.article-preview-headline_large {
+.gamma .m-article-preview-headline {
   font-size: 1.875rem;
 }
 
-.article-preview-headline_mobile {
-  font-size: 1.25rem;
+.mol-mobile .m-article-preview-headline {
   line-height: 1.18;
 }
