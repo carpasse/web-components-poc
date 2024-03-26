@@ -1,0 +1,17 @@
+.m-img {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.m-img-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  visibility: hidden;
+}
+
+.m-img-video_loaded {
+  visibility: visible;
+}
